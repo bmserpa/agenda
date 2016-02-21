@@ -5,13 +5,14 @@ class Usuario {
     private $nome;
     private $sobrenome;
     private $data;
+    private $opcao;
     private $cep;
     private $email;
     private $telefone;
     private $imagem;
     private $login;
     private $senha;
-    private $opcao;
+
 
 
     public function __construct($id, $nome, $sobrenome, $data, $cep, $opcao, $email, $telefone, $imagem, $login, $senha) {
@@ -20,12 +21,13 @@ class Usuario {
         $this->sobrenome = $sobrenome;
         $this->data = $data;
         $this->cep = $cep;
+        $this->opcao = $opcao;
         $this->email = $email;
         $this->telefone = $telefone;
         $this->imagem = $imagem;
         $this->login = $login;
         $this->senha = $senha;
-        $this->opcao = $opcao;
+
     }
 
     function getId() {

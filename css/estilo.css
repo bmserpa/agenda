@@ -121,6 +121,23 @@ font: Normal 38px Arial;
 }
 
 
+#centro{
+  left: 50%;
+  margin: 0px 0 0 -450px;
+  padding:10px;
+  position: absolute;
+  top: 50%;
+  color:gray;
+  background-color: rgb(161, 230, 135);
+  border: 15px;
+  border-bottom-style:;
+  border-color: rgba(62, 62, 62, 0.37);
+
+
+
+}
+
+
 /* Css do cadastro */
 
 #cssCadastro{

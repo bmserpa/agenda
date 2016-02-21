@@ -3,7 +3,7 @@
 class BancoDeDados {
     const HOST = 'localhost';
     const USUARIO = 'root';
-    const SENHA = '';
+    const SENHA = 'vertrigo';
     const BANCO = 'agenda';
 
     private $mysqli;

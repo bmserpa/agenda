@@ -14,7 +14,7 @@ class agendaDAO {
     public function leUsuario(){
         $select = 'SELECT * FROM usuario ORDER by id';
         $result = $this->bd->executaSelecao($select);
-        $listaUsuarios = array();
+        $listaUsuario = array();
         while($dados = $result->fetch_array()){
 
 
@@ -30,10 +30,10 @@ class agendaDAO {
             $login = $dados ['login'];
             $senha = $dados['senha'];
 
-            $usuario = new Usuario($nome, $sobrenome, $data, $cep, $opcao, $email, $telefone, $imagem, $login, $senha);
-            $listaUsuarios[] = $usuario;
+            $usuario = new Usuario($id,$nome, $sobrenome, $data, $cep, $opcao, $email, $telefone, $imagem, $login, $senha);
+            $listaUsuario[] = $usuario;
         }
-        return $listaUsuarios;
+        return $listaUsuario;
     }
 
 

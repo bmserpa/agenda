@@ -6,24 +6,24 @@ CREATE TABLE IF NOT EXISTS usuario (
 
     id INTEGER NOT NULL AUTO_INCREMENT,
 
-    nome VARCHAR(60),
+    nome VARCHAR(60) NOT NULL,
 
-    sobrenome VARCHAR(60),
+    sobrenome VARCHAR(60) NOT NULL,
 
-    data DATE,
+    data DATE NOT NULL,
 
-    cep INTEGER(9),
+    cep INTEGER(9) NOT NULL,
 
-    opcao VARCHAR(12),
+    opcao VARCHAR(12) NOT NULL,
 
-    email VARCHAR(200),
+    email VARCHAR(200) NOT NULL UNIQUE,
 
-    telefone INTEGER(12),
+    telefone VARCHAR(12) NOT NULL,
 
-    imagem BLOB,
+    imagem BLOB NOT NULL,
 
-    login VARCHAR(60),
+    login VARCHAR(60) NOT NULL UNIQUE,
 
-    senha VARCHAR(60),
+    senha VARCHAR(60) NOT NULL,
 
     PRIMARY KEY (id));

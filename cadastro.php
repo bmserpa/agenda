@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <meta charset="utf-8"/>
 <link rel="stylesheet" href="css/estilo.css" media="screen" type="text/css">
 </head>
   <body>
@@ -78,6 +79,7 @@ require_once 'agendaDAO.php';
 require_once 'agendaclass.php';
 
 
+
 $nome = filter_input(INPUT_POST, 'nome');
 $sobrenome = filter_input(INPUT_POST, 'sobrenome');
 $data = filter_input(INPUT_POST, 'data');
@@ -87,11 +89,10 @@ $email = filter_input(INPUT_POST, 'email');
 $telefone = filter_input(INPUT_POST, 'telefone');
 $imagem = $target_file;
 $login = filter_input(INPUT_POST, 'login');
-$senha = filter_input(INPUT_POST, 'senha');
+$senha = filter_input(INPUT_POST, 'senha' , FILTER_SANITIZE_SPECIAL_CHARS);
 
 
-
-
+$senha = md5($_POST['senha']);
 
 
 $data = implode("-",array_reverse(explode("/",$data)));
@@ -163,7 +164,7 @@ if ((!$nome) || (!$sobrenome) || (!$email) || (!$login)|| (!$senha)|| (!$data)||
 
    echo '<a href="formcadastro.php">Voltar</a> <br /><br />';
 
-   include "formcadastro.php";
+
 
 }else{
 
@@ -172,21 +173,34 @@ $usuario = new Usuario(NULL, $nome, $sobrenome, $data, $cep, $opcao, $email, $te
 $agendaDAO = new AgendaDAO($bd);
 $insert = $agendaDAO->adicionaUsuario($usuario);
 
+
+
+	if(mysql_errno() == 1062) {
+		echo $erros[mysql_errno()];
+		exit;
+	} else {
+		echo "Erro nao foi possivel efetuar o cadastro";
+
+
+
+
 if($insert){
         header('location:index.php');
 
 
-        
+
 
 
 }
 else{
-    echo '<p>Erro ao cadastrar usuario, por favor tente mais tarde: ' . $bd->getErro() . '.</p>';
+    echo '<p>Erro ao cadastrar usuario, usuario já existe: ' . $bd->getErro() . '.</p>';
 }
 
     $bd->fecha();
 
   }
+
+}
 
 
 

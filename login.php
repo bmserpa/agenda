@@ -9,7 +9,7 @@ require_once 'agendaDAO.php';
 
 $login = filter_input(INPUT_POST, 'login');
 $senha = filter_input(INPUT_POST, 'senha');
-
+$senha = md5($_POST['senha']);
 $bd = new BancoDeDados();
 $agendaDAO = new agendaDAO($bd);
 $result = $agendaDAO->fazLogin($login, $senha);
@@ -21,7 +21,12 @@ else {
      session_start();
      $_SESSION['login'] = $login;
      $_SESSION['senha'] = $senha;
-     header ('Location: index.php');
+
+                   header("Location:listacontatos.php");
+                   setcookie("login",$login);
+
 }
+
+
 
 ?>
