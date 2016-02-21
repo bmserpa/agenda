@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+
+}
+
+/* Css do fundo da pagina */
+
+body{
+    background-color: #b4fab4;
+}
+
+/* css do header */
+
+.header{
+
+     padding: 10px;
+     background-image: url("../img/fundo.png");
+     height: 51px;
+     border: 12px rgb(255, 255, 255);
+
+}
+
+/* Css do titulo */
+
+#titulo{
+
+     color:#fffafa;
+     font-family: helvetica;
+     margin-left: 20px;
+}
+
+
+
+/*Css do Menu */
+
+ul.nav {
+
+	margin:0;
+	padding:0;
+  margin-left:490px;
+  margin-top: 3px;
+	}
+
+ul.nav li {
+	list-style:none;
+	display:inline;
+	}
+ul.nav li a {
+	float:left;
+	border-top:0.1em solid #fff;
+	border-right:0.1em solid #909090;
+	border-bottom:0.1em solid #fff;
+	border-left:0.1em solid #fff;
+	width:8.0em;
+  height: 2.5em;
+	font:0.98em Helvetica,
+	sans-serif;
+	background:#86d54f;
+	color:#ffffff;
+	text-align:center;
+	padding:0  0.2em 0.2em  0;
+	text-decoration:none;
+  padding-top: 30px;
+
+	}
+
+/* Sprites do menu hover */
+
+ul.nav a:hover{
+	background:#dd4f4f;
+	color:#fff;
+	border-color:#000 #fafafa #fafafa #000;
+	}
+
+/* Css do Slider */
+
+  #imagens{
+      margin: 0 auto;
+      border: 2px solid #CCC;
+      padding: 10px;
+      width: 500px;
+      height: 300px;
+      margin-top: 150px;
+      border-radius: 5px;
+  }
+
+  #imagens ul{
+      margin: 0 auto;
+      border:2px solid #CCC;
+      padding: 0px;
+      list-style: none;
+
+  }
+
+  #imagens .pag{
+      margin-top: 50px;
+
+
+  }
+
+/* Css do texto nos slides */
+
+  .slider-item{
+}
+
+.slider-item p{
+opacity: 90%;
+bottom: 0;
+background: rgba(68, 68, 68, 0.8);
+position: absolute;
+color: rgb(255, 255, 255);
+font: Normal 38px Arial;
+
+
+
+}
+
+
+/* Css do cadastro */
+
+#cssCadastro{
+
+                left: 50%;
+                margin: -130px 0 0 -250px;
+                padding:10px;
+                position: absolute;
+                top: 50%;
+				        color:gray;
+                background-color: rgb(161, 230, 135);
+                border: 15px;
+                border-bottom-style:;
+                border-color: rgba(62, 62, 62, 0.37);
+
+}
+
+.hint{
+    display:none;
+    }
+
+.field:hover .hint {
+    display: block;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.6);
+
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    }
+
+#data{
+	color: rgb(155, 158, 153);
+
+
+
+}
+
+
+#color{
+  color: rgb(255, 255, 255);
+
+
+}
+
+#cssCadastrologin{
+
+                left: 60%;
+                margin: -130px 0 0 -250px;
+                padding:10px;
+                position: absolute;
+                top: 50%;
+				        color:gray;
+                background-color: rgb(219, 219, 219);
+                border: 15px;
+                border-bottom-style:;
+                border-color: rgba(62, 62, 62, 0.37);
+
+}
+
+
+.but {
+display: inline-block;
+background-color: #ffffff;
+color: #444;
+padding: 10px 20px;
+text-decoration: none;
+box-sizing: border-box;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 14px;
+border: 0px;
+
+}
+
+.but:hover{
+  background-color: rgb(228, 35, 35);
+	color: rgb(237, 237, 237);
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition:all .7s ease;
+  transition: all .7s ease;
+  }
+
+
+
+
+#cssbutlimpar{
+  left: 50%;
+  margin: -165px 0 0 35px;
+  padding:115px;
+  position: absolute;
+  top: 100%;
+}
+
+
+
+
+#cssbutlogin{
+  left: 20%;
+  margin: 62px 0 0 30px;
+  padding:15px;
+  position: absolute;
+  top: 75%;
+}
+
+#cssbutlogin2{
+  left: 20%;
+  margin: 53px 0 0 30px;
+  padding:15px;
+  position: absolute;
+  top: 75%;
+}
+
+#cssbutcadastro{
+  left: 65%;
+  margin: -130px 0 0 -265px;
+  padding:15px;
+  position: absolute;
+  top: 135%;
+}
